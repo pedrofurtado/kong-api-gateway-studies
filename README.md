@@ -22,8 +22,14 @@ basic auth
 
 api key auth
 
+rota public
+
 req transformer
 
 response transformer
 
 circuit breaker
+
+logs
+
+dashboards do GUI
