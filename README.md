@@ -20,6 +20,10 @@ jwt
 
 basic auth
 
+sessions
+
+LDAP auth
+
 api key auth
 
 rota public
