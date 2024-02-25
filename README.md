@@ -28,6 +28,8 @@ req transformer
 
 response transformer
 
+consumers
+
 circuit breaker
 
 logs
