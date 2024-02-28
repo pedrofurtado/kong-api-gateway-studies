@@ -4,10 +4,6 @@ Studies for Kong API Gateway
 
 ## TODOs
 
-ambiente docker com kong db-less
-
-ambiente docker com kong com db postgres
-
 dev portal
 
 rate limit
@@ -17,6 +13,8 @@ correlation id
 oauth2
 
 jwt
+
+acl (roles and permissions)
 
 basic auth
 
