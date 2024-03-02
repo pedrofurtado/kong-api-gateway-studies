@@ -17,6 +17,15 @@ x-service-one-ruby:
     - ./service-one-ruby:/app
   command: /bin/bash -c "bundle install && bundle exec rackup --host 0.0.0.0 --port 9292"
 
+x-service-two-nodejs:
+  &service-two-nodejs
+  restart: always
+  image: node:16
+  working_dir: /app
+  volumes:
+    - ./service-two-nodejs:/app
+  command: /bin/bash -c "npm install && npm run start"
+
 services:
   kong_migrations:
     image: kong:3.6.0
@@ -62,3 +71,12 @@ services:
 
   service_one_ruby_replica02:
     <<: *service-one-ruby
+
+  service_two_nodejs_replica01:
+    <<: *service-two-nodejs
+
+  service_two_nodejs_replica02:
+    <<: *service-two-nodejs
+
+  service_two_nodejs_replica03:
+    <<: *service-two-nodejs
