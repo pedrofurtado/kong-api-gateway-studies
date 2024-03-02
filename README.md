@@ -16,21 +16,13 @@ jwt
 
 acl (roles and permissions)
 
-basic auth
-
 sessions
 
 LDAP auth
 
-api key auth
-
-rota public
-
 req transformer
 
 response transformer
-
-consumers
 
 circuit breaker
 
