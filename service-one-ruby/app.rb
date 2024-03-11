@@ -12,6 +12,7 @@ def make_response(text)
     hostname: `hostname`.strip,
     request_data: {
       headers: headers,
+      body: (JSON.parse(request.body.read) rescue nil),
       params: params,
       env: request.env
     }
