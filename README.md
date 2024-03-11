@@ -14,8 +14,6 @@ correlation id
 
 oauth2
 
-jwt
-
 acl (roles and permissions)
 
 sessions
