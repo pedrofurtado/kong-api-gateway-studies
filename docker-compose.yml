@@ -7,6 +7,7 @@ x-kong-config:
   KONG_PG_HOST: kong_database_pg
   KONG_PG_USER: kongdbuser
   KONG_PG_PASSWORD: kongpassword
+  KONG_TRUSTED_IPS: 0.0.0.0/0,::/0
 
 x-service-one-ruby:
   &service-one-ruby
@@ -25,6 +26,15 @@ x-service-two-nodejs:
   volumes:
     - ./service-two-nodejs:/app
   command: /bin/bash -c "npm install && npm run start"
+
+x-service-three-python:
+  &service-three-python
+  restart: always
+  image: python:3.12
+  working_dir: /app
+  volumes:
+    - ./service-three-python:/app
+  command: /bin/bash -c "pip install Flask==3.0.2 && python3 main.py" # run at port 5000
 
 services:
   kong_migrations:
@@ -80,3 +90,6 @@ services:
 
   service_two_nodejs_replica03:
     <<: *service-two-nodejs
+
+  service_three_python_replica01:
+    <<: *service-three-python
