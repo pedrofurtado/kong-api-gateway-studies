@@ -12,14 +12,6 @@ dev portal
 
 correlation id
 
-oauth2
-
-acl (roles and permissions)
-
-sessions
-
-LDAP auth
-
 req transformer
 
 response transformer
