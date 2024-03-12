@@ -9,4 +9,4 @@ Studies for Kong API Gateway.
 #### TODOs
 
 correlation ID
-req/response transformer
+response transformer
