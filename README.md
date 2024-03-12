@@ -8,6 +8,5 @@ Studies for Kong API Gateway.
 
 #### TODOs
 
-response rate limit (custom header)
 correlation ID
 req/response transformer
